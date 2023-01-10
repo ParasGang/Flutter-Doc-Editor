@@ -1,22 +1,19 @@
 export 'utils.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class FlutterDocsEditorApp extends StatelessWidget {
-  const FlutterDocsEditorApp({Key? key}) : super(key: key);
+class FlutterDocsEditorApp extends ConsumerStatefulWidget {
+  const FlutterDocsEditorApp({super.key});
 
   @override
+  ConsumerState<ConsumerStatefulWidget> createState() =>
+      _FlutterDocsEditorAppState();
+}
+
+class _FlutterDocsEditorAppState extends ConsumerState<FlutterDocsEditorApp> {
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
-    );
+    return Container();
   }
 }
